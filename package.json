@@ -1,0 +1,24 @@
+{
+  "name": "webpack-restaurante-page",
+  "version": "1.0.0",
+  "description": "I am building a small web page for the Odin Project, using Webpack and JavaScript with the goal of learning how Webpack works. The final expected result is a simple restaurant page, generated entirely using JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3"
+  }
+}
