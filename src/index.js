@@ -1,8 +1,11 @@
 import './css/style.css';
 import icon from './assets/yolk.ico';
 
+import testingCreateElement from './js/home';
+
 const iconImg = document.querySelector(`link[rel~='icon']`);
 iconImg.href = icon;
 
-console.log('1 2 3');
-console.log('clean');
+window.onload = () => {
+  testingCreateElement();
+};
