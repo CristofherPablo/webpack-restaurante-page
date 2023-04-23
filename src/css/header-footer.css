@@ -18,11 +18,11 @@
 }
 
 .headerLogo img {
-    width: 110px;
+  width: 110px;
 }
 
 .headerLogo p {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 /* Main navbar menu setup */
@@ -38,23 +38,44 @@ header li {
   justify-content: center;
 }
 
-#menu li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: 0.3s all;
-    box-sizing: border-box;
+#menu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s all;
+  box-sizing: border-box;
 }
 
-#menu li:hover{
-    border: 2px solid  black;
+#menu li:hover {
+  border: 2px solid black;
 }
 
-.activePage{
-    background-color: black;
-    color: white;
+.activePage {
+  background-color: black;
+  color: white;
+}
+
+/* Footer setup */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: .3s all;
+}
+
+footer a:hover{
+    color: rgba(255, 255, 255, 0.7);
 }

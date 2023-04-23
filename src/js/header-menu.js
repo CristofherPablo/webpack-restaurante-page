@@ -20,9 +20,9 @@ var headerMenu = (function () {
     logoTxt = new DOMConstructor('p', null, null, `Funny Donuts'`);
     // nav elements 
     ul = new DOMConstructor('ul', 'menu', null, null);
-    liHome = new DOMConstructor('li', null, null, 'Home');
-    liMenu = new DOMConstructor('li', null, null, 'Menu');
-    liContact = new DOMConstructor('li', null, null, 'Contact Us');
+    liHome = new DOMConstructor('li', 'btnHome', null, 'Home');
+    liMenu = new DOMConstructor('li', 'btnMenu', null, 'Menu');
+    liContact = new DOMConstructor('li', 'btnContact', null, 'Contact Us');
 
   }
 
