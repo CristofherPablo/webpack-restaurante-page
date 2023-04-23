@@ -1,5 +1,5 @@
 import './css/style.css';
-import icon from './assets/yolk.ico';
+import icon from './assets/icon.png';
 
 import testingCreateElement from './js/home';
 

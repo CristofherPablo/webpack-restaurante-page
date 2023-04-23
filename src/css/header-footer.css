@@ -1,0 +1,65 @@
+/* Header basic setup  */
+#headerMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px 30px 10px 10px;
+  background-color: aliceblue;
+}
+
+/* Logo Img and Name setup */
+.headerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerLogo img {
+    width: 110px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.headerLogo img:hover{
+    scale: 1.2;
+}
+
+.headerLogo p {
+    font-size: 1.8rem;
+}
+
+/* Main navbar menu setup */
+header ul,
+header li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#menu {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+#menu li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s all;
+    box-sizing: border-box;
+}
+
+#menu li:hover{
+    border: 2px solid  black;
+}
+
+.activePage{
+    background-color: black;
+    color: white;
+}
