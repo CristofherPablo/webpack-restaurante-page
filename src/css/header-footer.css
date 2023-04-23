@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 10px 30px 10px 10px;
+  padding: 0px 30px 0px 10px;
   background-color: aliceblue;
 }
 
@@ -14,16 +14,11 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .headerLogo img {
     width: 110px;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-}
-
-.headerLogo img:hover{
-    scale: 1.2;
 }
 
 .headerLogo p {
