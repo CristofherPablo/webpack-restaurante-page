@@ -1,3 +1,4 @@
+import '../css/home.css';
 import DOMConstructor from './DOMConstructor';
 import firstSlide from '../assets/slide1.jpg';
 import secondSlide from '../assets/slide2.jpg';
@@ -11,6 +12,7 @@ var homePage = (function () {
   function init() {
     cacheDOM();
     render();
+    autoSlide();
   }
 
   function cacheDOM() {
@@ -26,11 +28,11 @@ var homePage = (function () {
   function render() {
     //setting the main carousel
     let divCarousel = div.setElement();
-    divCarousel.classList.add('slides');
+    divCarousel.classList.add('slider');
 
     // setting up the inner container
     let divSlider = div.setElement();
-    divSlider.classList.add('slider');
+    divSlider.classList.add('slides');
 
     //setting the four inputs and appending to the carousel
     for (let i = 0; i < 4; i++) {
@@ -39,9 +41,9 @@ var homePage = (function () {
       inputElement = input.setElement();
       inputElement.type = 'radio';
       inputElement.name = 'radio-btn';
-      inputElement.id = 'radio' + i;
+      inputElement.id = 'radio' + (i + 1);
 
-      divCarousel.appendChild(inputElement);
+      divSlider.appendChild(inputElement);
     }
 
     //setting the four slides and appending to the slider container
@@ -84,7 +86,7 @@ var homePage = (function () {
 
     for (let i = 0; i < 4; i++) {
       let divAuto = div.setElement();
-      divAuto.classList.add('auto-btn' + i);
+      divAuto.classList.add('auto-btn' + (i + 1));
 
       divNavigation.appendChild(divAuto);
     }
@@ -98,7 +100,7 @@ var homePage = (function () {
 
     for (let i = 0; i < 4; i++) {
       let labelManual = label.setElement();
-      labelManual.for = 'radio' + i;
+      labelManual.setAttribute('for', 'radio' + (i + 1));
       labelManual.classList.add('manual-btn');
 
       divManual.appendChild(labelManual);
@@ -108,6 +110,22 @@ var homePage = (function () {
     content.appendChild(divCarousel);
   }
 
+  function autoSlide() {
+    let countSlide = 1;
+    document.getElementById('radio1').checked = true;
+
+    setInterval(() => {
+      nextImage();
+    }, 4000);
+
+    function nextImage() {
+      countSlide++;
+      if (countSlide > 4) {
+        countSlide = 1;
+      }
+      document.getElementById(`radio${countSlide}`).checked = true;
+    }
+  }
   return {
     init: init,
   };
