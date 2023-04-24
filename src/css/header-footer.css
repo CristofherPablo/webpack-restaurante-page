@@ -5,7 +5,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   padding: 0px 30px 0px 10px;
-  background-color: aliceblue;
+  background-color: var(--backGround);
 }
 
 /* Logo Img and Name setup */
@@ -51,12 +51,12 @@ header li {
 }
 
 #menu li:hover {
-  border: 2px solid black;
+  border: 2px solid var(--border);
 }
 
 .activePage {
-  background-color: black;
-  color: white;
+  background-color: var(--border);
+  color: var(--text-color);
 }
 
 /* Footer setup */
@@ -65,13 +65,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  color: white;
+  background-color: var(--footer-background);
+  color: var(--text-color);
 }
 
 footer a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   transition: .3s all;
 }
