@@ -1,7 +1,7 @@
 :root{
   --text-color: white;
   --border: black;
-  --backGround: aliceblue;
+  --backGround: #c3dadf;
   --footer-background: black;
 }
 
@@ -17,4 +17,5 @@ body{
 .content {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }

@@ -13,7 +13,7 @@ var homePage = (function () {
     cacheDOM();
     render();
     autoSlide();
-    getHeight ()
+    getHeight();
   }
 
   function cacheDOM() {
@@ -61,6 +61,7 @@ var homePage = (function () {
         divSlideContainer.classList.add('first');
         // setting the button and small description
         divSlide = div.setElement();
+        divSlide.classList.add('innerDiv');
         btnSlide = btn.setElement();
         btnSlide.innerText = 'Oder from Menu';
         pSlide = p.setElement();
@@ -129,17 +130,17 @@ var homePage = (function () {
     }
   }
 
-  function getHeight () {
+  function getHeight() {
     var slides = document.querySelector('.slides');
     var slider = document.querySelector('.slider');
     var heightHeader = document.querySelector('header').offsetHeight;
 
-    slides.style.height = (window.innerHeight - heightHeader - 70) + 'px';
-    slider.style.height = (window.innerHeight - heightHeader - 70) + 'px';
-
+    slides.style.height = window.innerHeight - heightHeader - 50.4 + 'px';
+    slider.style.height = window.innerHeight - heightHeader - 50.4 + 'px';
   }
   return {
     init: init,
+    getHeight: getHeight,
   };
 })();
 
