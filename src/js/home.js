@@ -13,6 +13,7 @@ var homePage = (function () {
     cacheDOM();
     render();
     autoSlide();
+    getHeight ()
   }
 
   function cacheDOM() {
@@ -71,10 +72,11 @@ var homePage = (function () {
       }
 
       //setting the image
-      imgSlide = img.setElement();
-      imgSlide.setAttribute('src', slidesImg[i]);
+      divSlideContainer.style.backgroundImage = 'url(' + slidesImg[i] + ')';
+      //imgSlide = img.setElement();
+      //imgSlide.setAttribute('src', slidesImg[i]);
       //appending the img
-      divSlideContainer.appendChild(imgSlide);
+      //divSlideContainer.appendChild(imgSlide);
       //appending to the slider
       divSlider.appendChild(divSlideContainer);
     }
@@ -125,6 +127,16 @@ var homePage = (function () {
       }
       document.getElementById(`radio${countSlide}`).checked = true;
     }
+  }
+
+  function getHeight () {
+    var slides = document.querySelector('.slides');
+    var slider = document.querySelector('.slider');
+    var heightHeader = document.querySelector('header').offsetHeight;
+
+    slides.style.height = (window.innerHeight - heightHeader - 70) + 'px';
+    slider.style.height = (window.innerHeight - heightHeader - 70) + 'px';
+
   }
   return {
     init: init,
