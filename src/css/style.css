@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Fasthand&display=swap');
+
 :root{
   --text-color: white;
   --border: black;
   --backGround: #c3dadf;
   --footer-background: black;
+  --innerDiv: #FFE4E1;
+  --dancingFont: 'Dancing Script', cursive;
 }
 
 html,

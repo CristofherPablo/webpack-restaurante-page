@@ -12,7 +12,7 @@ var homePage = (function () {
   function init() {
     cacheDOM();
     render();
-    autoSlide();
+    //autoSlide();
     getHeight();
   }
 
@@ -63,12 +63,12 @@ var homePage = (function () {
         divSlide = div.setElement();
         divSlide.classList.add('innerDiv');
         btnSlide = btn.setElement();
-        btnSlide.innerText = 'Oder from Menu';
+        btnSlide.innerText = 'Order From The Menu';
         pSlide = p.setElement();
-        pSlide.innerText = 'The Best Donuts from the town!!';
+        pSlide.innerText = 'The Best Donuts from town!!';
 
-        divSlide.appendChild(btnSlide);
         divSlide.appendChild(pSlide);
+        divSlide.appendChild(btnSlide);
         divSlideContainer.appendChild(divSlide);
       }
 
