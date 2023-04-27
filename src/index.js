@@ -10,7 +10,7 @@ iconImg.href = icon;
 
 window.onload = () => {
   headerMenu.init();
-  homePage.init();
+  
   window.onresize = () => {
     homePage.getHeight();
   };
