@@ -12,7 +12,7 @@ var homePage = (function () {
   function init() {
     cacheDOM();
     render();
-    //autoSlide();
+    autoSlide();
     getHeight();
   }
 
