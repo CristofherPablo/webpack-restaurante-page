@@ -12,19 +12,62 @@ import plain from '../assets/plain.jpg';
 import sakura from '../assets/sakura.jpg';
 import strawberry from '../assets/strawberry.jpg';
 
-
 class MenuAssets {
   constructor() {
     this.menuArray = [
-      { picture: `${caramel}`, name: 'Caramel' },
-      { picture: `${coconut}`, name: 'Coconut' },
-      { picture: `${nutella}`, name: 'Nutella' },
-      { picture: `${darkChocolate}`, name: 'Dark Chocolate' },
-      { picture: `${oreo}`, name: 'Oreo' },
-      { picture: `${pistachio}`, name: 'Pistachio' },
-      { picture: `${plain}`, name: 'Original' },
-      { picture: `${sakura}`, name: 'Sakura' },
-      { picture: `${strawberry}`, name: 'Strawberry' },
+      {
+        picture: `${caramel}`,
+        name: 'Caramel',
+        description:
+          'Raised ring with caramel frosting and sprinkled with powdered sugar',
+      },
+      {
+        picture: `${coconut}`,
+        name: 'Coconut',
+        description:
+          'Raised ring with coconut topping and filled with coconut cream',
+      },
+      {
+        picture: `${nutella}`,
+        name: 'Nutella',
+        description:
+          'Raised ring with chocolate frosting, filled with nutella and colorful sprinkles',
+      },
+      {
+        picture: `${darkChocolate}`,
+        name: 'Dark Chocolate',
+        description:
+          'Raised ring with dark chocolate topping and squared chocolate sprinkles',
+      },
+      {
+        picture: `${oreo}`,
+        name: 'Oreo',
+        description:
+          'Raised ring with oreo topping with oreo bites and chocolate dough',
+      },
+      {
+        picture: `${pistachio}`,
+        name: 'Pistachio',
+        description:
+          'Raised ring with pistachio topping and colorful sprinkles',
+      },
+      {
+        picture: `${plain}`,
+        name: 'Original',
+        description: 'Raised ring with glaze',
+      },
+      {
+        picture: `${sakura}`,
+        name: 'Sakura',
+        description:
+          'Raised ring with Sakura frosting and sprinkled Sakura seeds',
+      },
+      {
+        picture: `${strawberry}`,
+        name: 'Strawberry',
+        description:
+          'Raised ring with Strawberry frosting and sprinkled Strawberry bites and white sprinkles',
+      },
     ];
   }
 
