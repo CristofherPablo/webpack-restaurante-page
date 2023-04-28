@@ -97,6 +97,9 @@ class MenuAssets {
       div.classList.add('menuCard');
 
       //make a flip card structure
+      let flipContainer = this.div.setElement();
+      flipContainer.classList.add('flipContainer');
+
       let flipDiv = this.div.setElement();
       flipDiv.classList.add('flipCard');
 
@@ -116,13 +119,14 @@ class MenuAssets {
       backCard.appendChild(pBack);
       flipDiv.appendChild(innerCard);
       flipDiv.appendChild(backCard);
+      flipContainer.appendChild(flipDiv);
 
       //setting the product name
       let p = this.p.setElement();
       p.innerText = element.name;
 
       //appending all the cards
-      div.appendChild(flipDiv);
+      div.appendChild(flipContainer);
       div.appendChild(p);
       this.container.appendChild(div);
     }
