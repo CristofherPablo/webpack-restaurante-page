@@ -86,7 +86,7 @@ class MenuAssets {
       null
     );
     this.container = this.container.setElement();
-    this.div = new DOMConstructor('div', null, ['menuCard'], null, null);
+    this.div = new DOMConstructor('div', null, null, null, null);
     this.img = new DOMConstructor('img', null, null, null, null);
     this.p = new DOMConstructor('p', null, null, null, null);
   }
@@ -94,12 +94,35 @@ class MenuAssets {
   render() {
     for (const element of this.menuArray) {
       let div = this.div.setElement();
-      let img = this.img.setElement();
-      let p = this.p.setElement();
+      div.classList.add('menuCard');
 
+      //make a flip card structure
+      let flipDiv = this.div.setElement();
+      flipDiv.classList.add('flipCard');
+
+      let innerCard = this.div.setElement();
+      innerCard.classList.add('innerCard');
+
+      let img = this.img.setElement();
       img.setAttribute('src', element.picture);
+
+      let backCard = this.div.setElement();
+      backCard.classList.add('backCard');
+
+      let pBack = this.p.setElement();
+      pBack.innerText = element.description;
+
+      innerCard.appendChild(img);
+      backCard.appendChild(pBack);
+      flipDiv.appendChild(innerCard);
+      flipDiv.appendChild(backCard);
+
+      //setting the product name
+      let p = this.p.setElement();
       p.innerText = element.name;
-      div.appendChild(img);
+
+      //appending all the cards
+      div.appendChild(flipDiv);
       div.appendChild(p);
       this.container.appendChild(div);
     }

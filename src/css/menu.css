@@ -1,32 +1,75 @@
-.containerMenu{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    margin: 30px auto;
+.containerMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 30px auto;
 }
 
-.menuCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    border: 1px solid lightgray;
+.menuCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  border: 1px solid lightgray;
 }
 
-.menuCard img {
-    width: 300px;
-    height: 300px;
-    padding-bottom: 5px;
+/* Flp Card styles  */
+.flipCard {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* the 3D effect */
 }
 
-.menuCard p {
-    width: 80%;
-    text-align: center;
-    margin-top: 5px;
-    padding: 10px 10px 0px 10px;
-    border-top: 2px solid lightgray;
-    font-family: var(--dancingFont);
-    font-size: 1.5rem;
-    font-weight: 700;
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+}
+
+.innerCard img {
+  width: 300px;
+  height: 300px;
+}
+
+.flipCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.innerCard,
+.backCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.innerCard {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.backCard {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg) !important;
+  transform-style: preserve-3d;
+}
+
+.menuCard > p {
+  width: 80%;
+  text-align: center;
+  margin-top: 5px;
+  padding: 10px 10px 0px 10px;
+  border-top: 2px solid lightgray;
+  font-family: var(--dancingFont);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
