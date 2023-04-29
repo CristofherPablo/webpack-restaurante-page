@@ -1,4 +1,5 @@
 import DOMConstructor from './DOMConstructor';
+import '../css/contact.css';
 
 // Define a ContactPage class
 class ContactPage {
@@ -54,8 +55,12 @@ class ContactPage {
     subject.placeholder = 'Subject';
 
     let submit = this.button.setElement(); // Create a submit button element
+    let divButton = this.div.setElement();
+    divButton.classList.add('buttonForm');
     submit.classList.add('submitButton'); // Add a class to the button
     submit.type = 'submit'; // Set the button type to submit
+    submit.innerText = 'Submit';
+    divButton.appendChild(submit);
 
     // Append the input elements to the form
     form.appendChild(name);
@@ -63,7 +68,7 @@ class ContactPage {
     form.appendChild(email);
     form.appendChild(phone);
     form.appendChild(subject);
-    form.appendChild(submit);
+    form.appendChild(divButton);
 
     // Append the title and form to the container
     container.appendChild(title);
