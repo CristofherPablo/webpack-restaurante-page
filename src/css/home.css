@@ -1,11 +1,14 @@
 .slider {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
 }
 
 .slides {
+  flex: 1 1 auto;
   width: 400%;
   display: flex;
 }

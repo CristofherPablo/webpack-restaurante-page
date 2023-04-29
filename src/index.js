@@ -14,7 +14,7 @@ const menuPage = new MenuAssets();
 window.onload = () => {
 
   headerMenu.init();
-  ContactPage.init();
+  homePage.init();
   footerBar.init();
 
   //window.onresize = () => {
