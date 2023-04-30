@@ -18,6 +18,31 @@ function cleanPage() {
   pageContainer.innerHTML = '';
 }
 
+function getMenuBtn() {
+  const homeBtn = document.querySelector('#btnHome');
+  const menuBtn = document.querySelector('#btnMenu');
+  const contactBtn = document.querySelector('#btnContact');
+
+  homeBtn.addEventListener('click', () => {
+    changePage('home');
+    cleanPage();
+    initWebsite();
+    getMenuBtn()
+  });
+  menuBtn.addEventListener('click', () => {
+    changePage('menu');
+    cleanPage();
+    initWebsite();
+    getMenuBtn()
+  });
+  contactBtn.addEventListener('click', () => {
+    changePage('contact');
+    cleanPage();
+    initWebsite();
+    getMenuBtn()
+  });
+}
+
 function initWebsite() {
   headerMenu.init();
   pagePicked.init();
@@ -35,23 +60,5 @@ function changePage(clickedBtn) {
 }
 
 initWebsite();
+getMenuBtn();
 
-const homeBtn = document.querySelector('#btnHome');
-const menuBtn = document.querySelector('#btnMenu');
-const contactBtn = document.querySelector('#btnContact');
-
-homeBtn.addEventListener('click', () => {
-  changePage('home');
-  cleanPage();
-  initWebsite();
-});
-menuBtn.addEventListener('click', () => {
-  changePage('menu');
-  cleanPage();
-  initWebsite();
-});
-contactBtn.addEventListener('click', () => {
-  changePage('contact');
-  cleanPage();
-  initWebsite();
-});
