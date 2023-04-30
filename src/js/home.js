@@ -126,7 +126,10 @@ var homePage = (function () {
       if (countSlide > 4) {
         countSlide = 1;
       }
-      document.getElementById(`radio${countSlide}`).checked = true;
+
+      if (document.getElementById(`radio${countSlide}`)) {
+        document.getElementById(`radio${countSlide}`).checked = true;
+      }
     }
   }
 
