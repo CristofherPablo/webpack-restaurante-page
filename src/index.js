@@ -24,22 +24,22 @@ function getMenuBtn() {
   const contactBtn = document.querySelector('#btnContact');
 
   homeBtn.addEventListener('click', () => {
-    changePage('home');
     cleanPage();
+    changePage('home');
     initWebsite();
-    getMenuBtn()
+    getMenuBtn();
   });
   menuBtn.addEventListener('click', () => {
-    changePage('menu');
     cleanPage();
+    changePage('menu');
     initWebsite();
-    getMenuBtn()
+    getMenuBtn();
   });
   contactBtn.addEventListener('click', () => {
     changePage('contact');
     cleanPage();
     initWebsite();
-    getMenuBtn()
+    getMenuBtn();
   });
 }
 
@@ -59,6 +59,5 @@ function changePage(clickedBtn) {
   }
 }
 
-initWebsite();
+initWebsite(true);
 getMenuBtn();
-

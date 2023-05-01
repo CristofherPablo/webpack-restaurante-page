@@ -117,9 +117,20 @@ var homePage = (function () {
     let countSlide = 1;
     document.getElementById('radio1').checked = true;
 
-    setInterval(() => {
-      nextImage();
-    }, 4000);
+    let intervalSlide = null;
+    if (document.getElementById(`radio${countSlide}`)) {
+      startAutoSlide();
+    }
+
+    function startAutoSlide() {
+      intervalSlide = setInterval(() => {
+        nextImage();
+      }, 4000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(intervalSlide);
+    }
 
     function nextImage() {
       countSlide++;
@@ -127,8 +138,11 @@ var homePage = (function () {
         countSlide = 1;
       }
 
-      if (document.getElementById(`radio${countSlide}`)) {
-        document.getElementById(`radio${countSlide}`).checked = true;
+      const radioBtn = document.getElementById(`radio${countSlide}`);
+      if (radioBtn) {
+        radioBtn.checked = true;
+      } else {
+        stopAutoSlide();
       }
     }
   }
